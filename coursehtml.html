@@ -1,0 +1,693 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      height: 100px;
+    }
+
+    .logoimage {
+      margin-left: 30px;
+      max-width: 180px;
+    }
+
+    .nav-items {
+      font-size: 25px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      margin-right: 0px;
+      margin-left: 750px;
+      height: 100px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+      display: inline-block;
+      position: relative;
+    }
+    .nav-items a:hover {
+      text-decoration: underline;
+      font-size: 27px;
+    }
+
+    /* CSS for main body*/
+    .heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(46, 46, 46, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://bbdniit.ac.in/wp-content/uploads/2020/09/banner-background-without-image-min.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.95;
+    }
+    .htmllogo {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+    .heading h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .heading p {
+      font-size: 20px;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    
+    .flex{
+      display: flex;
+      flex-direction: row;
+    }
+    .topics {
+      overflow: scroll;
+      width: 250px;
+      height: 735px;
+    }
+    .link{
+      background-color: #6d94a4;
+      color: white;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      text-align: left;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      width: 200px;
+    }
+    .link:hover{
+      background-color: #ffffff;
+      color: black;
+    }
+    .content {
+      margin-left: 50px;
+      overflow: scroll;
+      height: 750px;
+      width: 1500px;
+    }
+    .content h1 {
+      font-size: 40px;
+    }
+    .content p {
+      font-size: 25px;
+    }
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 4px 80px;
+    }
+
+    .websitename {
+      color: #fff;
+      font-size: 60px;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+    .instasocial {
+      max-width: 25px;
+    }
+    .linkedinsocial {
+      max-width: 25px;
+    }
+    .twittersocial {
+      max-width: 25px;
+    }
+
+        /* CSS for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: white;
+  color: #000;
+  padding: 35px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  display: inline-block;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #f1f1f1;
+}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="feeprojecthomepage.html" class="logo"> <img src="C:\Users\dipan\OneDrive\Documents\logowhite.jpg" class="logoimage"></a>
+    <nav class="nav-items">
+      <a href="feeprojecthomepage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Courses</button>
+        <div class="dropdown-content">
+          <a href="coursehtml.html">HTML</a>
+          <a href="coursecss2.html">CSS</a>
+          <a href="coursepython2.html">Python</a>
+          <a href="coursejava.html">JavaScript</a>
+          <a href="coursec.html">C</a>
+          <a href="coursec++.html">C++</a>
+        </div>
+      </div>
+      <a href="#ABOUT">About</a>
+      <a href="loginpageproject.html">Login</a>
+    </nav>
+  </header>
+  <main>
+    <div class="heading">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/800px-HTML5_Badge.svg.png" class="htmllogo">
+      <h1>
+        HTML
+      </h1>
+      <p>
+        HTML (HyperText Markup Language) is a language used for creating webpages which is the fundamental building block of the Web.
+        Our HTML tutorials will teach you everything you need to know about HTML5 (modern HTML) step-by-step.
+      </p>
+    </div>
+    <div class="flex">
+    <p class="topics">
+      <a href=#introduction class="link">HTML Introduction</a><br>
+      <a href=#editors class="link">HTML Editors</a><br>
+      <a href=#basicexamples class="link">HTML Basic</a><br>
+      <a href=#elements class="link">HTML Elements</a><br>
+      <a href=#attributes class="link">HTML Attributes</a><br>
+      <a href=#heading class="link">HTML Headings</a><br>
+      <a href=#paragraph class="link">HTML Paragraphs</a><br>
+      <a href=#styling class="link">HTML Styles</a><br>
+      <a href=#formatting class="link">HTML Formatting</a><br>
+      <a href=#color class="link">HTML Colors</a><br>
+      <a href=#stylecss class="link">HTML CSS</a><br>
+      <a href=#images class="link">HTML Images</a><br>
+      <a href=#titles class="link">HTML Page Title</a><br>
+      <a href=#tables class="link">HTML Tables</a><br>
+      <a href=#lists class="link">HTML Lists</a><br>
+      <a href=#div class="link">HTML Div</a><br>
+      <a href=#forms class="link">HTML Forms</a>
+    </p>
+    <div class="content">
+      <h1 id="introduction">HTML Tutorial</h1>
+      <p>HTML is the standard markup language for creating Web pages.</p>
+      <p><b>What is HTML?</b><br><br>
+        HTML stands for Hyper Text Markup Language<br>
+        HTML is the standard markup language for creating Web pages<br>
+        HTML describes the structure of a Web page<br>
+        HTML consists of a series of elements<br>
+        HTML elements tell the browser how to display the content<br>
+        HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.<br>
+        </p>
+        <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-24 120050.png">
+        <p><b>Example Explained</b><br>
+          The < DOCTYPE html> declaration defines that this document is an HTML5 document<br>
+          The < html> element is the root element of an HTML page<br>
+          The < head> element contains meta information about the HTML page<br>
+          The < title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)<br>
+          The < body> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.<br>
+          The < h1> element defines a large heading<br>
+          The < p> element defines a paragraph</p>
+          <p><b>What is an HTML Element?</b><br>
+            An HTML element is defined by a start tag, some content, and an end tag:<br>
+            < tagname> Content goes here... < /tagname><br>
+            The HTML element is everything from the start tag to the end tag:<br>
+            < h1>My First Heading< /h1><br>
+            < p >My first paragraph.< /p ></p>
+            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-24 164225.png" style="max-width: 800px;">
+            <p><b>Web Browsers</b><br>
+              The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly.<br>
+              A browser does not display the HTML tags, but uses them to determine how to display the document:
+            </p>
+            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-24 164522.png" style="max-width: 500px;">
+            <p><b>HTML Page Structure</b><br>
+              Below is a visualization of an HTML page structure:</p>
+              <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-24 164735.png" style="max-width: 1000px;">
+              <h1 id="editors">HTML Editors</h1>
+              <p>A simple text editor is all you need to learn HTML.<br></p>
+                <p><b>Learn HTML Using Notepad or TextEdit</b><br>
+                Web pages can be created and modified by using professional HTML editors.<br>
+                However, for learning HTML we recommend a simple text editor like Notepad (PC) or TextEdit (Mac).<br>
+                We believe that using a simple text editor is a good way to learn HTML.<br>
+                Follow the steps below to create your first web page with Notepad or TextEdit.
+              </p>
+              <p>
+                <b>Step 1: Open Notepad (PC)</b><br>
+                Windows 8 or later:<br>
+                Open the Start Screen (the window symbol at the bottom left on your screen). Type Notepad.<br>
+                Windows 7 or earlier:<br>
+                Open Start > Programs > Accessories > Notepad<br>
+              </p>
+              <p>
+                Step 1: Open TextEdit (Mac)<br>
+                Open Finder > Applications > TextEdit<br>
+                Also change some preferences to get the application to save files correctly. In Preferences > Format > choose "Plain Text"<br>
+                Then under "Open and Save", check the box that says "Display HTML files as HTML code instead of formatted text".<br>
+                Then open a new document to place the code.<br>
+              </p>
+              <p><b>Step 2: Write Some HTML</b><br>
+                Write or copy the following HTML code into Notepad:</p>
+                <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-24 172026.png" style="max-width: 1100px;">
+                <p><b>Step 3: Save the HTML Page</b><br>
+                  Save the file on your computer. Select File > Save as in the Notepad menu.<br>
+                  Name the file "index.htm" and set the encoding to UTF-8 (which is the preferred encoding for HTML files).<br></p>
+                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-24 172609.png" style="max-width: 500px;">
+                  <p>
+                    <b>Step 4: View the HTML Page in Your Browser</b><br>
+                    Open the saved HTML file in your favorite browser (double click on the file, or right-click - and choose "Open with").<br>
+                    The result will look much like this:<br>
+                  </p>
+                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-24 174258.png" style="max-width: 650px;">
+                  <h1 id="basicexamples">HTML Basic Examples</h1>
+                  <p>In this chapter we will show some basic HTML examples.<br>
+                    Don't worry if we use tags you have not learned about yet.</p>
+                    <p>
+                      <b>HTML Documents</b><br>
+                      All HTML documents must start with a document type declaration: < !DOCTYPE html>.<br>
+                      The HTML document itself begins with < html > and ends with < /html >.<br>
+                      The visible part of the HTML document is between < body > and < /body >.<br>
+                    </p>
+                    <p>
+                      <b>The <!DOCTYPE> Declaration</b><br>
+                      The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly.<br>
+                      It must only appear ince, at the top of the page (before any HTML tags).<br>
+                      The <!DOCTYPE> declaration is not case sensitive.<br>
+                    </p>
+                    <p>
+                      <b>HTML Headings</b><br>
+                      HTML headings are defined with the < h1 > to < h6 > tags.<br>
+                    </p>
+                    <p>
+                      <b>HTML Paragraphs</b><br>
+                      HTML paragraphs are defined with the < p > tag.<br>
+                    </p>
+                    <p>
+                      <b>HTML Links</b><br>
+                      HTML links are defined with the < a > tag.<br>
+                      The link's destination is specified in the href attribute.<br>
+                      Attributes are used to provide additional information about HTML elements.
+                    </p>
+                    <p>
+                      HTML Images
+                      HTML images are defined with the <img> tag.
+                      The source file (src), alternative text (alt), width, and height are provided as attributes
+                    </p>
+                    <h1 id="elements">HTML Elements</h1>
+                    <p>
+                      An HTML element is defined by a start tag, some content, and an end tag.<br>
+                      <b>HTML Elements</b><br>
+                      The HTML element is everything from the start tag to the end tag:<br>
+                      < tagname >Content goes here...< /tagname <br>
+                      Examples of some HTML elements:<br>
+                      < h1 >My First Heading< /h1 ><br>
+                      < p >My first paragraph.< /p ><br>
+                    </p>
+                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-26 014904.png" style="max-width: 1000px;">
+                    <p>
+                      <b>Empty HTML Elements</b><br>
+                      HTML elements with no content are called empty elements.<br>
+                      The <br> tag defines a line break, and is an empty element without a closing tag.<br>
+                    </p>
+                    <p>
+                      <b>HTML Tag Reference</b><br>
+                      Elearnx's tag reference contains additional information about these tags and their attributes.<br>
+                    </p>
+                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-26 015433.png" style="max-width: 1000px;">
+                    <h1 id="attributes">HTML Attributes</h1>
+                    <p>HTML attributes provide additional information about HTML elements.<br>
+                      <b>HTML Attributes</b><br>
+                      All HTML elements can have attributes<br>
+                      Attributes provide additional information about elements<br>
+                      Attributes are always specified in the start tag<br>
+                      Attributes usually come in name/value pairs like: name="value"<br>
+                      The href Attribute<br>
+                      The < a > tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:<br></p>
+                      <h2>< a href="https://www.YouTube.com">Visit W3Schools< /a ></h2>
+                      <p><b>The src Attribute</b><br>
+                        The < img > tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:
+                        </p>
+                        <h2>< img src="img_girl.jpg"></h2>
+                        <p>There are two ways to specify the URL in the src attribute:<br>
+                          <b>1. Absolute URL</b> - Links to an external image that is hosted on another website. Example: src="https://www.w3schools.com/images/img_girl.jpg".<br>
+                          Notes: External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.<br>
+                          <b>2. Relative URL</b> - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain. Example: src="/images/img_girl.jpg".<br>
+                          Tip: It is almost always best to use relative URLs. They will not break if you change domain.<br>
+                          <b>The width and height Attributes</b><br>
+                          The < img > tag should also contain the width and height attributes, which specify the width and height of the image (in pixels):<br></p>
+                          <h2>< img src="img_girl.jpg" width="500" height="600" ></h2>
+                          <p><b>The alt Attribute</b><br>
+                            The required alt attribute for the <img> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.<br></p>
+                            <h2><img src="img_girl.jpg" alt="Girl with a jacket"></h2>
+                            <p><b>The style Attribute</b><br>
+                              The style attribute is used to add styles to an element, such as color, font, size, and more.<br></p>
+                              <h2>< p style="color:red;">This is a red paragraph.< /p ></h2>
+                              <p><b>The title Attribute</b><br>
+                                The title attribute defines some extra information about an element.<br> 
+                                The value of the title attribute will be displayed as a tooltip when you mouse over the element:<br>
+                                </p>
+                                <h2>< p title="I'm a tooltip">This is a paragraph.< /p ></h2>
+                                <h1 id="heading">HTML Headings</h1>
+                                <p>HTML headings are titles or subtitles that you want to display on a webpage.</p>
+                                <p><b>HTML Headings</b><br>
+                                  HTML headings are defined with the < h1 > to < h6 > tags.<br>
+                                  < h1 > defines the most important heading. < h6 > defines the least important heading.<br>
+                                <b>Examples</b></p>
+                                <p>< h1>Heading 1< /h1><br>
+                                  < h2>Heading 2< /h2><br>
+                                  < h3>Heading 3< /h3><br>
+                                  < h4>Heading 4< /h4><br>
+                                  < h5>Heading 5< /h5><br>
+                                  < h6>Heading 6< /h6></p>
+                                  <h1 id="paragraph">HTML Paragraphs</h1>
+                                  <p>A paragraph always starts on a new line, and is usually a block of text.<br>
+                                    <b>HTML Paragraphs</b><br>
+                                    The HTML < p > element defines a paragraph.<br>
+                                    A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.<br></p>
+                                    <h1 id="styling">HTML Styling</h1>
+                                    <p>The HTML style attribute is used to add styles to an element, such as color, font, size, and more.</p>
+                                    <p><b>The HTML Style Attribute</b><br>
+                                      Setting the style of an HTML element, can be done with the style attribute.<br>
+                                      The HTML style attribute has the following syntax:<br></p>
+                                      <h2>< tagname style="property:value;">< /tagname></h2>
+                                      <p><b>Background Color</b><br>
+                                        The CSS background-color property defines the background color for an HTML element.<br></p>
+                                        <p><b>Examples</b><br>
+                                          < body style="background-color:powderblue;" ><br>
+                                            < h1 >This is a heading< /h1 ><br>
+                                            < p >This is a paragraph.< /p ><br>
+                                            < /body ><br></p>
+                                            <h1 id="color">Text Color</h1>
+                                              <p>The CSS color property defines the text color for an HTML element:<br></p>
+                                              <h2>< h1 style="color:blue;">This is a heading< /h1 >
+                                                < p style="color:red;">This is a paragraph.< /p ></h2>
+                                                <p><b>Fonts</b><br>
+                                                  The CSS font-family property defines the font to be used for an HTML element:<br>
+                                                  <b>Example</b><br></p>
+                                                  <h2>< h1 style="font-family:verdana;">This is a heading< /h1 ><br>
+                                                    < p style="font-family:courier;">This is a paragraph.< /p ><br></h2>
+                                                    <p><b>Text Size</b><br>
+                                                      The CSS font-size property defines the text size for an HTML element:<br>
+                                                    <b>Examples</b></p>
+                                                  <h2>< h1 style="font-size:300%;">This is a heading< /h1 ><br>
+                                                    < p style="font-size:160%;">This is a paragraph.< /p ></h2>
+                                                    <p><b>Text Alignment</b><br>
+                                                      The CSS text-align property defines the horizontal text alignment for an HTML element:<br>
+                                                    <b>Examples</b></p>
+                                                    <h2>< h1 style="text-align:center;">Centered Heading< /h1 ><br>
+                                                      < p style="text-align:center;">Centered paragraph.< /p ><br></h2>
+                                                      <h1 id="formatting">HTML Text Formatting</h1>
+                                                      <p>HTML contains several elements for defining text with a special meaning.<br>
+                                                      </p><p>
+                                                      <b>HTML Formatting Elements</b><br>
+                                                      Formatting elements were designed to display special types of text:<br></p>
+                                                      <h2>< b > - Bold text<br>
+                                                      < strong > - Important text<br>
+                                                      < i > - Italic text<br>
+                                                      < em > - Emphasized text<br>
+                                                      < mark > - Marked text<br>
+                                                      < small > - Smaller text<br>
+                                                      < del > - Deleted text<br>
+                                                      < ins > - Inserted text<br>
+                                                      < sub > - Subscript text<br>
+                                                      < sup > - Superscript text<br></h2> 
+                                                      <p>HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.<br>
+                                                      </p>
+                                                      <p><b>Color Names</b><br>
+                                                        In HTML, a color can be specified by using a color name:<br></p>
+                                                        <h1 style="background-color:Tomato;">Tomato</h1>
+                                                        <h1 style="background-color:Orange;">Orange</h1>
+                                                        <h1 style="background-color:DodgerBlue;">DodgerBlue</h1>
+                                                        <h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+                                                        <h1 style="background-color:Gray;">Gray</h1>
+                                                        <h1 style="background-color:SlateBlue;">SlateBlue</h1>
+                                                        <h1 style="background-color:Violet;">Violet</h1>
+                                                        <h1 style="background-color:LightGray;">LightGray</h1>
+                                                        <p><b>Text Color</b><br>
+                                                          You can set the color of text:<br></p>
+                                                          <h1 style="color:Tomato;">Hello World</h1>
+                                                          <p style="color:DodgerBlue;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                          <p style="color:MediumSeaGreen;">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                                          <p><b>Examples</b></p>
+                                                          <h2 style="background-color: #a1a1a168;">< h1 style="color:Tomato;">Hello World< /h1 ><br>
+                                                            < p style="color:DodgerBlue;">Lorem ipsum...< /p ><br>
+                                                            < p style="color:MediumSeaGreen;">Ut wisi enim...< /p ></h2><br>
+                                                            <p><b>Border Color</b><br>
+                                                              You can set the color of borders:</p>
+                                                              <h1 style="border:2px solid Tomato;">Hello World</h1>
+                                                              <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+                                                              <h1 style="border:2px solid Violet;">Hello World</h1>
+                                                              <p><b>Examples</b></p>
+                                                              <h2 style="background-color: #a1a1a168;">
+                                                                < h1 style="border:2px solid Tomato;">Hello World< /h1 ><br>
+                                                                < h1 style="border:2px solid DodgerBlue;">Hello World< /h1 ><br>
+                                                                < h1 style="border:2px solid Violet;">Hello World< /h1 ></h2><br>
+                                                                <h1 id="stylecss">HTML Styles - CSS</h1>
+                                                                <p>CSS stands for Cascading Style Sheets.<br>
+                                                                  CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p><br>
+                                                                  <p><b>What is CSS?</b><br>
+                                                                    Cascading Style Sheets (CSS) is used to format the layout of a webpage.<br>
+                                                                    With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!</p><br>
+                                                                    <p><b>Using CSS</b><br>
+                                                                      CSS can be added to HTML documents in 3 ways:<br>
+                                                                      Inline - by using the style attribute inside HTML elements<br>
+                                                                      Internal - by using a > style > element in the > head > section <br>
+                                                                      External - by using a < link > element to link to an external CSS file<br>
+                                                                      The most common way to add CSS, is to keep the styles in external CSS files. However, in this tutorial we will use inline and internal styles, because this is easier to demonstrate, and easier for you to try it yourself.</p><br>
+                                                                      <p><b>Inline CSS</b><br>
+                                                                        An inline CSS is used to apply a unique style to a single HTML element.<br>
+                                                                        An inline CSS uses the style attribute of an HTML element.<br>
+                                                                        The following example sets the text color of the < h1 > element to blue, and the text color of the < p > element to red:<br></p>
+                                                                        <h2>< h1 style="color:blue;">A Blue Heading< /h1 ><br>
+                                                                            < p style="color:red;">A red paragraph.< /p ></h2>
+                                                                            <p><b>Internal CSS</b><br>
+                                                                              An internal CSS is used to define a style for a single HTML page.<br>
+                                                                              An internal CSS is defined in the <  head > section of an HTML page, within a > style > element.<br>
+                                                                              The following example sets the text color of ALL the < h1 > elements (on that page) to blue, and the text color of ALL the < p > elements to red. In addition, the page will be displayed with a "powderblue" background color:<br> </p>
+                                                                              <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-26 185400.png">
+                                                                              <p><b>External CSS</b><br>
+                                                                                An external style sheet is used to define the style for many HTML pages.<br>
+                                                                                To use an external style sheet, add a link to it in the <head> section of each HTML page:<br></p>
+                                                                                <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-26 185557.png">
+                                                                                <p><b>CSS Colors, Fonts and Sizes</b>
+                                                                                  Here, we will demonstrate some commonly used CSS properties. You will learn more about them later.<br>
+                                                                                  The CSS color property defines the text color to be used.<br>
+                                                                                  The CSS font-family property defines the font to be used.<br>
+                                                                                  The CSS font-size property defines the text size to be used.<br></p>
+                                                                                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-26 185749.png">
+                                                                                  <p><b>CSS Border</b><br>
+                                                                                    The CSS border property defines a border around an HTML element.<br>
+                                                                                    Tip: You can define a border for nearly all HTML elements.<br></p>
+                                                                                    <h2>p {
+                                                                                      border: 2px solid powderblue;
+                                                                                    }</h2>
+                                                                                    <p><b>CSS Padding</b><br>
+                                                                                      The CSS padding property defines a padding (space) between the text and the border.<br></p>
+                                                                                      <h2>p {
+                                                                                        border: 2px solid powderblue;
+                                                                                        padding: 30px;
+                                                                                      }</h2>
+                                                                                      <p><b>CSS Margin</b><br>
+                                                                                        The CSS margin property defines a margin (space) outside the border.<br></p>
+                                                                                        <h2>p {
+                                                                                          border: 2px solid powderblue;
+                                                                                          margin: 50px;
+                                                                                        }</h2>
+                                                                                        <h1 id="images">HTML Images</h1>
+                                                                                        <p>Images can improve the design and the appearance of a web page.</p>
+                                                                                        <p><b>HTML Images Syntax</b><br>
+                                                                                          The HTML < img > tag is used to embed an image in a web page.<br>
+                                                                                          Images are not technically inserted into a web page; images are linked to web pages. The < img > tag creates a holding space for the referenced image.<br>
+                                                                                          The < img > tag is empty, it contains attributes only, and does not have a closing tag.<br>
+                                                                                          The < img > tag has two required attributes:<br>
+                                                                                          src - Specifies the path to the image<br>
+                                                                                          alt - Specifies an alternate text for the image</p>
+                                                                                          <h2>< img src="url" alt="alternatetext" ></h2>
+                                                                                          <p><b>The src Attribute</b><br>
+                                                                                            The required src attribute specifies the path (URL) to the image.<br></p>
+                                                                                            <h2>< img src="img_chania.jpg" alt="Flowers in Chania" ></h2>
+                                                                                            <p><b>The alt Attribute</b><br>
+                                                                                              The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).<br>
+                                                                                              The value of the alt attribute should describe the image:<br></p>
+                                                                                              <h2>< img src="img_chania.jpg" alt="Flowers in Chania" ></h2>
+                                                                                              <p><b>Image Size - Width and Height</b><br>
+                                                                                                You can use the style attribute to specify the width and height of an image.<br></p>
+                                                                                                <h2>< img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;" ></h2>
+                                                                                                <h1 id="titles">HTML Page Title</h1>
+                                                                                                <p>Every web page should have a page title to describe the meaning of the page.</p>
+                                                                                                <p>The < title > element adds a title to your page:</p>
+                                                                                                <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 143902.png">
+                                                                                                <p>The title should describe the content and the meaning of the page.<br>
+                                                                                                  The page title is very important for search engine optimization (SEO). The text is used by search engine algorithms to decide the order when listing pages in search results.<br>
+                                                                                                  The < title > element:<br>
+                                                                                                  defines a title in the browser toolbar<br>
+                                                                                                  provides a title for the page when it is added to favorites<br>
+                                                                                                  displays a title for the page in search engine-results<br>
+                                                                                                  So, try to make the title as accurate and meaningful as possible!<br></p>
+                                                                                                  <h1 id="tables">HTML Tables</h1>
+                                                                                                  <p>HTML tables allow web developers to arrange data into rows and columns.</p>
+                                                                                                  <p><b>Define an HTML Table</b><br>
+                                                                                                    A table in HTML consists of table cells inside rows and columns.<br></p>
+                                                                                                    <p><b>Examples</b><br>
+                                                                                                    a simple HTML table:</p>
+                                                                                                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 144624.png">
+                                                                                                    <p><b>Table Cells</b><br>
+                                                                                                      Each table cell is defined by a < td > and a < /td > tag.</p>
+                                                                                                      <p>Everything between < td > and < /td > are the content of the table cell.</p>
+                                                                                                      <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 144748.png">
+                                                                                                      <p><b>Table Rows</b><br>
+                                                                                                        Each table row starts with a < tr > and ends with a < /tr > tag.</p>
+                                                                                                        <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 145401.png">
+                                                                                                        <h1 id="lists">HTML Lists</h1>
+                                                                                                        <p>HTML lists allow web developers to group a set of related items in lists.</p>
+                                                                                                        <p><b>Unordered HTML List</b><br>
+                                                                                                          An unordered list starts with the < ul > tag. Each list item starts with the < li > tag.<br>
+                                                                                                          The list items will be marked with bullets (small black circles) by default:</p>
+                                                                                                          <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 145839.png">
+                                                                                                          <p><b>Ordered HTML List</b><br>
+                                                                                                            An ordered list starts with the <ol> tag. Each list item starts with the <li> tag.<br>
+                                                                                                            The list items will be marked with numbers by default:</p>
+                                                                                                            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 150024.png">
+                                                                                                            <p><b>HTML Description Lists</b><br>
+                                                                                                              HTML also supports description lists.<br>
+                                                                                                              A description list is a list of terms, with a description of each term.<br>
+                                                                                                              The < dl > tag defines the description list, the < dt > tag defines the term (name), and the < dd > tag describes each term:</p>
+                                                                                                              <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 150209.png">
+                                                                                                              <h1 id="div">HTML Div Element</h1>
+                                                                                                              <p>The <div> element is used as a container for other HTML elements.</p>
+                                                                                                                <p><b>The < div > Element</b><br>
+                                                                                                                  The < div > element is by default a block element, meaning that it takes all available width, and comes with line breaks before and after.<br></p>
+                                                                                                                  <p>The < div > element has no required attributes, but style, class and id are common.</p>
+                                                                                                                  <p><b>< div > as a container</b><br>
+                                                                                                                    The < div > element is often used to group sections of a web page together.<br></p>
+                                                                                                                    <p><b>Example</b><br>
+                                                                                                                      A < div > element with HTML elements:</p>
+                                                                                                                      <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 153828.png">
+                                                                                                                      <p><b>Center align a < div > element</b><br>
+                                                                                                                        If you have a < div > element that is not 100% wide, and you want to center-align it, set the CSS margin property to auto.</p>
+                                                                                                                        <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 154111.png">
+                                                                                                                        <h1 id="forms">HTML Forms</h1>
+                                                                                                                        <p>An HTML form is used to collect user input. The user input is most often sent to a server for processing.</p>
+                                                                                                                        <p><b>Examples</b></p>
+                                                                                                                        <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 155442.png">
+                                                                                                                        <p><b>The < form > Element</b><br>
+                                                                                                                          The HTML < form > element is used to create an HTML form for user input:</p>
+                                                                                                                          <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 155557.png">
+                                                                                                                          <p>The < form > element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.<br>
+                                                                                                                            All the different form elements are covered in this chapter: HTML Form Elements.<br>
+                                                                                                                            </p>
+                                                                                                                            <p><b>The < input > Element</b><br>
+                                                                                                                              The HTML < input > element is the most used form element.<br>
+                                                                                                                              An < input > element can be displayed in many ways, depending on the type attribute.<br>
+                                                                                                                              Here are some examples:</p>
+                                                                                                                              <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 155803.png">
+                                                                                                                              <p><b>Text Fields</b><br>
+                                                                                                                                The < input type="text" > defines a single-line input field for text input.</p>
+                                                                                                                                <p><b>Example</b><br>
+                                                                                                                                  A form with input fields for text:<br>
+                                                                                                                                  </p>
+                                                                                                                                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-27 155904.png">
+
+                                                                                                                      </div>
+                                                                                                                      </div>
+  </main>
+  <footer class="footer">
+    <div class="websitename"> Elearnx</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>Courses</span>
+        <a href="coursehtml.html" id="ABOUT">Html</a>
+        <a href="coursecss2.html">Css</a>
+        <a href="coursepython2.html">Python</a>
+        <a href="coursejava.html">Javascript</a>
+        <a href="coursec.html">C</a>
+        <a href="coursec++.html">C++</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="https://www.instagram.com/heyitsdipanshu/"> <img src="C:\Users\dipan\Downloads\logo-ig-png-32464.png" class="instasocial"> </a>
+        <a href=""> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAYFBMVEUAd7X///8Ac7NGlMRGk8QAdrUAbLAAbrDZ7PXV6fPy+fw9ir/p9Pkugbo0hr3D2umz0ORUnMh3q9C72eplocoIe7dsps6dxN6lyeCDs9TL4u+WwNzg7vVTmMYhg7uy1OcLxWtDAAABaklEQVRIie3W7Y6CMBAFUBxohwIK8qEIgu//lltou7TortNu9p83MRGSIzgzlEaHwETyU51jr5wrBWsODDzCgNcLrHjkHV5JOIE/hEnCOATGEiYhMHGgLBELgdi1lxlJ1IH8uvS17CjShtiriRCekM1mlm7oBaE2sCEMhA1vBg5+kCUG9n63GmGqXJYTqmNDlhcrrAkXdPsIx3FI+4TidpPDkHNOm7ndrP6U9TH/5VZxDewPsEvaS5t0CK8h9qXKSd4tq9T3EaC73rOl2EVp/X0bcqcddzMMU7YtbFuHHShsqH+lnJwlsUIqFIW7mLZAhPuYOfaGh5nR4fBotgLVQIWik+PE+11h38NCLUGmV+Ypfw9HdQU0j/lAhfr9AKafggizXHc81/VJibA4qvKzk4HE4nzgB/4jfLU8UiA26RqxQn0wfEOhTjTPMEIdZh9EOsw9QXzpPOdvMHgTGLztDN7oBm+twzfzYfkCChobmnKthiYAAAAASUVORK5CYII=" class="linkedinsocial"> </a>
+        <a href="https://twitter.com/home"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAV1BMVEX///8dofIAmvEAnPH2+/4GnvI0p/O22vq93vre7/3v+P7M5vvW6vwAmPHs9v6m0/mZzfiHxfdzvfbk8v1Bq/NpufUAlfGOyPcAkfBRsPR+wfZdtPTH4/udz3kPAAABLklEQVRIie2U2ZaDIAxAScLiVnHBOm39/++c0toptAZ65nHG+4bmSkwgQuzs/HuqZvyNZjUi0nBzx5qLWpaXB9IReBQaUUxHyYkTNvEDrWCFiI4Fm9f1fZTNTPBEGdmVjIgAaIN16IF2Xx23ow+kU/tY1pEIB9YT7l6I86qaSFSG9YR91HAq5JsIvOers36dyJ3trD4WxyBUUew5XpPYdXFw+IuXVKbEeqDmhNjzHhB/bq4XAXkRq1RxzIHN9JTyfOtoW6RE+2/ITm+bGc9ot72hzYgCtgurc54oNwuL7NAITHgvD6Wa/8S6l/pQ6rRFxCc218IfFh0li0NO8He3qudYU5hthJA9XodgnCVePhrjbR/eXkU4NXlpZekdoYf0YNjJzVCVTdnmw3Z2/jjfQWEJXwOeKIcAAAAASUVORK5CYII=" class="twittersocial"> </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

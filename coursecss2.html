@@ -1,0 +1,374 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      height: 100px;
+    }
+
+    .logoimage {
+      margin-left: 30px;
+      max-width: 180px;
+    }
+
+    .nav-items {
+      font-size: 25px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      margin-right: 0px;
+      margin-left: 750px;
+      height: 100px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+      display: inline-block;
+      position: relative;
+    }
+    .nav-items a:hover {
+      text-decoration: underline;
+      font-size: 27px;
+    }
+
+    /* CSS for main body*/
+    .heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://bbdniit.ac.in/wp-content/uploads/2020/09/banner-background-without-image-min.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.95;
+    }
+    .csslogo {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+    .heading h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .heading p {
+      font-size: 20px;
+      color: white;
+      text-transform: uppercase;
+      margin: 20px;
+      text-align: center;
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    
+    .flex{
+      display: flex;
+      flex-direction: row;
+    }
+    .topics {
+      overflow: scroll;
+      width: 250px;
+      height: 735px;
+    }
+    .link{
+      background-color: #6d94a4;
+      color: white;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      text-align: left;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      width: 200px;
+    }
+    .link:hover{
+      background-color: #ffffff;
+      color: black;
+    }
+    .content {
+      margin-left: 50px;
+      overflow: scroll;
+      height: 750px;
+      width: 1500px;
+    }
+    .content h1 {
+      font-size: 40px;
+    }
+    .content p {
+      font-size: 25px;
+    }
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 4px 80px;
+    }
+
+    .websitename {
+      color: #fff;
+      font-size: 60px;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+    .instasocial {
+      max-width: 25px;
+    }
+    .linkedinsocial {
+      max-width: 25px;
+    }
+    .twittersocial {
+      max-width: 25px;
+    }
+
+        /* CSS for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: white;
+  color: #000;
+  padding: 35px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  display: inline-block;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #f1f1f1;
+}
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="feeprojecthomepage.html" class="logo"> <img src="C:\Users\dipan\OneDrive\Documents\logowhite.jpg" class="logoimage"></a>
+    <nav class="nav-items">
+      <a href="feeprojecthomepage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Courses</button>
+        <div class="dropdown-content">
+          <a href="coursehtml.html">HTML</a>
+          <a href="coursecss2.html">CSS</a>
+          <a href="coursepython2.html">Python</a>
+          <a href="coursejava.html">JavaScript</a>
+          <a href="coursec.html">C</a>
+          <a href="coursec++.html">C++</a>
+        </div>
+      </div>
+      <a href="#ABOUT">About</a>
+      <a href="loginpageproject.html">Login</a>
+    </nav>
+  </header>
+  <main>
+    <div class="heading">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" class="csslogo">
+      <h1>
+        CSS
+      </h1>
+      <p>
+        Cascading Style Sheets (CSS) is a simple mechanism for adding style (e.g., fonts, colors, spacing) to Web documents.
+        Our CSS tutorials will teach you everything you need to know about modern CSS step-by-step.
+      </p>
+      </div>
+    <div class="flex">
+    <p class="topics">
+      <a href=#introduction class="link">CSS Tutorial</a><br>
+      <a href=#syntax class="link">CSS Syntax</a><br>
+      <a href=#selectors class="link">CSS Selectors</a><br>
+      <a href=#howto class="link">CSS How To</a><br>
+      <a href=#comments class="link">CSS Comments</a><br>
+      <a href=#comments class="link">HTML Headings</a><br>
+      <a href=#comments class="link">HTML Paragraphs</a><br>
+      <a href=#comments class="link">HTML Styles</a><br>
+      <a href=#comments class="link">HTML Formatting</a><br>
+      <a href=#comments class="link">HTML Colors</a><br>
+      <a href=#comments class="link">HTML CSS</a><br>
+      <a href=#comments class="link">HTML Images</a><br>
+      <a href=#comments class="link">HTML Page Title</a><br>
+      <a href=#comments class="link">HTML Tables</a><br>
+      <a href=#comments class="link">HTML Lists</a><br>
+      <a href=#comments class="link">HTML Div</a><br>
+      <a href=#comments class="link">HTML Forms</a>
+    </p>
+    <div class="content">
+      <h1 id="introduction">CSS Tutorial</h1>
+      <p>CSS is the language we use to style an HTML document.</p>
+      <p><b>What is CSS?</b><br><br>
+        CSS stands for Cascading Style Sheets<br>
+        CSS describes how HTML elements are to be displayed on screen, paper, or in other medias<br>
+        CSS saves a lot of work. It can control the layout of multiple web pages all at once<br>
+        External stylesheets are stored in CSS files<br>
+        </p>
+        <p><b>Why Use CSS?</b><br><br>
+          CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+        </p>
+        <p><b>CSS Example</b><br><br>
+          <img src="diksha1.png">
+        <h1 id="syntax">CSS Syntax</h1>
+          <img src="diksha2.png">
+          <p>
+          The selector points to the HTML element you want to style.<br>
+          The declaration block contains one or more declarations separated by semicolons.<br>
+          Each declaration includes a CSS property name and a value, separated by a colon.<br>
+          Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.<br>
+          </p>
+          <h2>Example</h2>
+          <p>
+          In this example all elements will be center-aligned, with a red text color:<br>
+          <img src="diksha3.png">
+          <h2>Example Explained</h2> </p>
+          <p>
+          p is a selector in CSS (it points to the HTML element you want to style: p).<br>
+          color is a property, and red is the property value <br>
+          text-align is a property, and center is the property value <br></p>
+        <h1 id="selectors">CSS Selectors</h1>
+          <p>A CSS selector selects the HTML element(s) you want to style.<br>
+          CSS selectors are used to "find" (or select) the HTML elements you want to style.<br>
+        </p>
+         <h2> We can divide CSS selectors into five categories:<br></h2>
+            <ul>
+           <li> Simple selectors (select elements based on name, id, class)<br></li>
+           <li> Combinator selectors (select elements based on a specific relationship between them)<br></li>
+           <li>  Pseudo-class selectors (select elements based on a certain state)<br></li>
+           <li> Pseudo-elements selectors (select and style a part of an element)<br></li>
+           <li> Attribute selectors (select elements based on an attribute or attribute value)<br></li>
+          </ul>
+        <h1 id="howto">How To Add CSS</h1>
+          <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.<br></p>
+          <h2>Three Ways to Insert CSS</h2>
+          <p>There are three ways of inserting a style sheet:<br></p>
+          <ul>
+          <li>External CSS</li>
+          <li>Internal CSS</li>
+          <li>Inline CSS</li>
+          </ul>
+          <p><b>External CSS</b><br><br>
+            With an external style sheet, you can change the look of an entire website by changing just one file!<br>
+            Each HTML page must include a reference to the external style sheet file inside the link element, inside the head section.<br></p>
+          <h2>Example</h2>
+          <p>External styles are defined within the link element, inside the head section of an HTML page:<br></p>
+          <img src="diksha4.png">
+          <p><b>Internal CSS</b><br><br>
+            An internal style sheet may be used if one single HTML page has a unique style.<br>
+            The internal style is defined inside the style element, inside the head section.<br></p>
+          <h2>Example</h2>
+          <p>Internal styles are defined within the style element, inside the head section of an HTML page:</p>
+          <img src="diksha5.png">
+          <p><b>Inline CSS</b><br><br>
+            An inline style may be used to apply a unique style for a single element.<br>
+            To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.<br>
+          <h2>Example</h2>
+          Inline styles are defined within the "style" attribute of the relevant element:<br></p>
+          <img src="diksha6.png">
+          <h1 id="comments">CSS Comments</h1>
+            <p>CSS comments are not displayed in the browser, but they can help document your source code.<br></p>
+          <h2>CSS Comments</h2>
+          <p>Comments are used to explain the code, and may help when you edit the source code at a later date.<br>
+          Comments are ignored by browsers.<br>
+          A CSS comment is placed inside the style element, and starts with /* and ends with */:<br></p>
+          <img src="diksha7.png">
+    </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="websitename"> Elearnx</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>Courses</span>
+        <a href="coursehtml.html" id="ABOUT">Html</a>
+        <a href="coursecss2.html">Css</a>
+        <a href="coursepython2.html">Python</a>
+        <a href="coursejava.html">Javascript</a>
+        <a href="coursec.html">C</a>
+        <a href="coursec++.html">C++</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="https://www.instagram.com/heyitsdipanshu/"> <img src="C:\Users\dipan\Downloads\logo-ig-png-32464.png" class="instasocial"> </a>
+        <a href=""> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAYFBMVEUAd7X///8Ac7NGlMRGk8QAdrUAbLAAbrDZ7PXV6fPy+fw9ir/p9Pkugbo0hr3D2umz0ORUnMh3q9C72eplocoIe7dsps6dxN6lyeCDs9TL4u+WwNzg7vVTmMYhg7uy1OcLxWtDAAABaklEQVRIie3W7Y6CMBAFUBxohwIK8qEIgu//lltou7TortNu9p83MRGSIzgzlEaHwETyU51jr5wrBWsODDzCgNcLrHjkHV5JOIE/hEnCOATGEiYhMHGgLBELgdi1lxlJ1IH8uvS17CjShtiriRCekM1mlm7oBaE2sCEMhA1vBg5+kCUG9n63GmGqXJYTqmNDlhcrrAkXdPsIx3FI+4TidpPDkHNOm7ndrP6U9TH/5VZxDewPsEvaS5t0CK8h9qXKSd4tq9T3EaC73rOl2EVp/X0bcqcddzMMU7YtbFuHHShsqH+lnJwlsUIqFIW7mLZAhPuYOfaGh5nR4fBotgLVQIWik+PE+11h38NCLUGmV+Ypfw9HdQU0j/lAhfr9AKafggizXHc81/VJibA4qvKzk4HE4nzgB/4jfLU8UiA26RqxQn0wfEOhTjTPMEIdZh9EOsw9QXzpPOdvMHgTGLztDN7oBm+twzfzYfkCChobmnKthiYAAAAASUVORK5CYII=" class="linkedinsocial"> </a>
+        <a href="https://twitter.com/home"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAV1BMVEX///8dofIAmvEAnPH2+/4GnvI0p/O22vq93vre7/3v+P7M5vvW6vwAmPHs9v6m0/mZzfiHxfdzvfbk8v1Bq/NpufUAlfGOyPcAkfBRsPR+wfZdtPTH4/udz3kPAAABLklEQVRIie2U2ZaDIAxAScLiVnHBOm39/++c0toptAZ65nHG+4bmSkwgQuzs/HuqZvyNZjUi0nBzx5qLWpaXB9IReBQaUUxHyYkTNvEDrWCFiI4Fm9f1fZTNTPBEGdmVjIgAaIN16IF2Xx23ow+kU/tY1pEIB9YT7l6I86qaSFSG9YR91HAq5JsIvOers36dyJ3trD4WxyBUUew5XpPYdXFw+IuXVKbEeqDmhNjzHhB/bq4XAXkRq1RxzIHN9JTyfOtoW6RE+2/ITm+bGc9ot72hzYgCtgurc54oNwuL7NAITHgvD6Wa/8S6l/pQ6rRFxCc218IfFh0li0NO8He3qudYU5hthJA9XodgnCVePhrjbR/eXkU4NXlpZekdoYf0YNjJzVCVTdnmw3Z2/jjfQWEJXwOeKIcAAAAASUVORK5CYII=" class="twittersocial"> </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
